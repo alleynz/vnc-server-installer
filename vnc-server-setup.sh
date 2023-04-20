@@ -26,6 +26,8 @@ After=multi-user.target
 [Service]
 Type=simple
 ExecStart=/usr/bin/x11vnc -auth guess -forever -noxdamage -repeat -rfbauth /etc/x11vnc/vncpwd -rfbport 5900 -shared
+Restart=always
+RestartSec=5
 
 [Install]
 WantedBy=multi-user.target
